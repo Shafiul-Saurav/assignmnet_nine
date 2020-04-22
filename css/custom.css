@@ -1,0 +1,526 @@
+@font-face {
+  font-family: Brandon_thin;
+  src: url(../fonts/Brandon_thin.otf);
+  font-weight: thin;
+  font-style: normal;
+}
+@font-face {
+  font-family: Brandon_reg;
+  src: url(../fonts/Brandon_reg.otf);
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: Brandon_med;
+  src: url(../fonts/Brandon_med.otf);
+  font-weight: medium;
+  font-style: normal;
+}
+@font-face {
+  font-family: Brandon_bld;
+  src: url(../fonts/Brandon_bld.otf);
+  font-weight: bold;
+  font-style: normal;
+}
+html {
+  scroll-behavior: smooth;
+}
+.container {
+  width: 75%;
+}
+h1 {
+  font-family: Brandon_bld;
+  font-weight: bold;
+  font-size: 60px;
+  margin-bottom: 35px;
+}
+h1 .header {
+  font-family: Brandon_reg;
+  font-weight: 300;
+}
+p {
+  font-family: Brandon_reg;
+  font-size: 18px;
+  font-weight: 400;
+  color: #9b9b9b;
+}
+@media (min-width: 992px) {
+  #mainNav {
+    padding: 0px 0 30px !important;
+    -webkit-transition: padding-top 0.3s, padding-bottom 0.3s;
+    -moz-transition: padding-top 0.3s, padding-bottom 0.3s;
+    transition: padding-top 0.3s, padding-bottom 0.3s;
+    border: none;
+    background-color: transparent;
+  }
+  #mainNav .navbar-brand {
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    margin-top: 20px;
+  }
+  #mainNav .navbar-nav .nav-item .nav-link {
+    font-family: Brandon_med;
+    font-weight: 600;
+    transition: all 0.3s ease 0s;
+    padding: 40px 15px 10px 15px;
+    color: #ffffff;
+  }
+  #mainNav.navbar-shrink .navbar-nav .nav-item .nav-link {
+    padding-top: 25px;
+    padding-bottom: 10px;
+  }
+  #mainNav .navbar-nav .nav-item .nav-link:hover {
+    color: #7690c5 !important;
+    background-color: #40afcc00;
+  }
+  #mainNav.navbar-shrink {
+    background-color: #000000ba;
+    padding: 0px 0 0px !important;
+  }
+  #mainNav.navbar-shrink .navbar-brand {
+    margin-top: -3px;
+  }
+}
+/*nav start*/
+.navbar-nav li {
+  position: relative;
+}
+.navbar-nav li a:hover {} .nav-item a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  color: #7690c5 !important;
+  background: #7690c5;
+  opacity: 1;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: .25s linear;
+}
+.nav-item a:hover:before,.nav-item a:focus:before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+.navbar-nav a {
+  color: #ffffff !important;
+  font-size: 18px;
+  font-weight: 300 !important;
+  transition: .4s ease !important;
+}
+.nav-item .active {
+  color: #7690c5 !important;
+}
+.nav-item .active::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  color: #7690c5 !important;
+  background: #7690c5;
+}
+.navbar-toggler {
+  color: #ffffff !important;
+  border: 2px solid #ffffff !important;
+  border-radius: 0;
+  padding: 5px 10px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+.navbar-toggler:hover {
+  border: 2px solid #333333 !important;
+  background-color: #ffffff;
+  color: #333333 !important;
+}
+.navbar-toggler span {
+  font-size: 18px;
+}
+.navbar-toggler:hover span {
+  color: #e59700;
+}
+/*nav end*/
+/*carousel start*/
+.carousel {
+  position: relative;
+}
+.carousel-inner {} .carousel-inner .carousel-item {} .carousel-inner .carousel-item img {} .carousel-inner .carousel-item img:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #002327a3;
+  z-index: 1;
+}
+.carousel-caption {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 700px;
+}
+.carousel-caption h5 {
+  font-family: Brandon_thin;
+  font-size: 32px;
+  margin-top: 40px;
+}
+.carousel-caption h2 {
+  font-family: Brandon_bld;
+  font-weight: bold;
+  font-size: 86px;
+  margin: 10px 0px 40px 0px;
+}
+.btn-custom {
+  font-family: Brandon_bld;
+  font-size: 23px;
+  color: #ffffff;
+  background-color: #40afcc00;
+  border-radius: 0;
+  padding: 18px 60px;
+  border: 2px solid #ffffff;
+  transition: 1s;
+}
+.carousel-control-prev {
+    left: 0;
+    top: 52%;
+    width: 30px;
+    height: 25px;
+    font-size: 14px;
+    transition: 0.5s;
+}
+.carousel-control-next {
+    left: 0;
+    top: 46%;
+    width: 30px;
+    height: 25px;
+    font-size: 14px;
+    transition: 0.5s;
+}
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  width: 50px;
+  background-color: #212529;
+}
+.first-child {
+  border-bottom-left-radius: 30px;
+}
+.last-child {
+  border-bottom-right-radius: 30px;
+}
+.btn-custom:hover {
+  color: #7690c5;
+  background-color: #ffffff;
+  border: 2px solid #7690c5;
+}
+/*carousel end*/
+/*web_dev start*/
+.web_dev {
+  margin: 100px 0;
+}
+.web_section {} .web_section .web {
+  margin-right: 30px;
+}
+.web h1 {
+}
+.web p {} .web_section .image_area {
+  margin-top: 30px;
+}
+.image_area img {
+  width: 100%;
+}
+/*web_dev end*/
+/*identity start*/
+.identity {
+  padding: 100px 0;
+  background-color: #f2f2f2;
+}
+.identity_section {} 
+.identity_section .web {
+    margin-left: 30px;
+}
+.identity_section .image_area {
+  margin-top: 30px;
+}
+/*identity end*/
+/*service start*/
+.service_section {
+  margin: 100px 0;
+}
+.service {} .feature {
+  margin-bottom: 50px;
+}
+.feature img {} .feature h2 {
+  font-family: Brandon_med;
+  font-weight: 700;
+  font-size: 22px;
+  margin-left: 18px;
+}
+.feature p {
+  margin-left: 18px;
+}
+/*service end*/
+/*client start*/
+.client_section {
+  padding: 100px 0;
+  background-color: #f2f2f2;
+}
+.client {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.cocoa {
+  margin-bottom: 50px;
+}
+.cocoa .image_area1 {} .cocoa .image_area1 img {
+  width: 230px;
+  height: 230px;
+  border-radius: 50%;
+}
+.cocoa .text_area {
+  padding: 40px 80px;
+  margin-top: 20px;
+}
+#talkbubble {
+  width: 98%;
+  background-color: #ffffff;
+  position: relative;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+#talkbubble:before {
+    content: "";
+    position: absolute;
+    right: 99%;
+    top: 42%;
+    width: 0;
+    height: 0;
+    border-top: 15px solid transparent;
+    border-right: 30px solid #ffffff;
+    border-bottom: 15px solid transparent;
+}
+.cocoa .text_area p {
+  font-family: Brandon_reg;
+  font-size: 22px;
+}
+.cocoa .text_area a {
+  font-family: Brandon_reg;
+  font-size: 20px;
+}
+.cocoa .text_area a:hover {
+  text-decoration: none;
+}
+.rain {} .rain .image_area1 {} .rain .image_area1 img {
+  margin-left: 50px;
+  width: 230px;
+  height: 230px;
+  border-radius: 50%;
+}
+.rain .text_area {
+    padding: 40px 80px;
+    margin-top: 20px;
+}
+#talkbubble1 {
+  width: 98%;
+  background-color: #ffffff;
+  position: relative;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+#talkbubble1:before {
+    content: "";
+    position: absolute;
+    right: -4%;
+    top: 42%;
+    width: 0;
+    height: 0;
+    border-top: 15px solid transparent;
+    border-left: 30px solid #ffffff;
+    border-bottom: 15px solid transparent;
+}
+.rain .text_area p {
+  font-family: Brandon_reg;
+  font-size: 22px;
+}
+.rain .text_area a {
+  font-family: Brandon_reg;
+  font-size: 20px;
+}
+.rain .text_area a:hover {
+  text-decoration: none;
+}
+/*client end*/
+/*skill start*/
+.skill_section {
+  margin: 100px 0;
+}
+.skill_section ul {} .skill_section ul li {
+  margin: 0 30px;
+}
+.skill_section ul li img {}
+/*skill end*/
+/*team start*/
+.team_section {
+  padding: 100px 0;
+  background-color: #000000;
+}
+.team {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.team h1 {
+  color: #ffffff;
+}
+.team p {} .card_box {
+  text-align: center;
+}
+.card {
+  width: 250px;
+  background-color: #000000;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+.card img {
+  width: 225px;
+  height: 225px;
+  border-radius: 50%;
+  border: 5px solid #ffffff;
+  margin: 0 auto;
+}
+.card h5 {
+  font-family: Brandon_bld;
+  font-size: 18px;
+  color: #ffffff;
+}
+.card p {
+  font-family: Brandon_reg;
+  font-size: 18px;
+  color: #ffffff;
+}
+.social {} .social ul {} .social ul li {
+  margin: 0 10px;
+}
+.social ul li a {} .social ul li a i {
+  color: #ffffff;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+  transition: 1s;
+}
+.social ul li a i:hover {
+  color: #7690c5;
+  border: 2px solid #7690c5;
+}
+.text {
+  margin-top: 50px;
+}
+.text p {
+  text-align: center;
+}
+/*team end*/
+/*contact start*/
+.contact_section {
+  background-color: #7690c5;
+  padding: 100px 0;
+}
+.hello {
+  margin-bottom: 45px;
+}
+.hello h1 {
+  color: #ffffff;
+}
+.hello p {
+  color: #ffffff;
+}
+.social2 {} .social2 ul {} .social2 ul li {
+  margin-bottom: 35px;
+}
+.social2 ul li a {
+  font-family: Brandon_reg;
+  font-size: 18px;
+  color: #ffffff;
+  transition: 1s;
+}
+.social2 ul li a:hover {
+  color: #000000;
+  text-decoration: none;
+}
+.social2 ul li a i {
+  margin-right: 10px;
+  font-size: 25px;
+}
+form{
+  width:100%;
+}
+.contact {} .form-row {} input[type="text"] {
+  padding: 30px;
+  margin-bottom: 30px;
+  border: 1px solid #40afcc;
+  border-radius: 0;
+}
+input[type="email"] {
+  padding: 30px;
+  margin-bottom: 30px;
+  border: 1px solid #40afcc;
+  border-radius: 0;
+}
+input::placeholder {
+  font-family: Brandon_med;
+  font-size: 18px;
+  color: #dcdcdc !important;
+}
+textarea::placeholder {
+  font-family: Brandon_med;
+  font-size: 18px;
+  color: #dcdcdc !important;
+  padding: 10px 0px 0px 20px;
+}
+textarea {
+  width: 100%;
+  height: 200px;
+  border: 1px solid #40afcc !important;
+  border-radius: 0 !important;
+  color: #aaaaaa;
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+.btn-custom2{
+  font-family: Brandon_bld;
+  font-size: 23px;
+  color: #ffffff;
+  background-color: #40afcc00;
+  border-radius: 0;
+  padding: 18px 60px;
+  border: 2px solid #ffffff;
+  transition: 1s;
+}
+.btn-custom2:hover {
+  color: #7690c5;
+  background-color: #ffffff;
+  border: 2px solid #7690c5;
+}
+/*contact end*/
+/*footer start*/
+footer {
+  background-color: #7690c5;
+}
+.order {
+  border-top: 1px solid #ffffff
+}
+.order p {
+  font-family: Brandon_med;
+  font-size: 16px;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 35px;
+  margin-bottom: 35px;
+}
+/*footer end*/
